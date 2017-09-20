@@ -1,0 +1,210 @@
+/*
+  Specificity to combat things like this (from CNN.com as of 6/6/16):
+
+  body > :not(.nav) {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+*/
+html > body > cloudflare-app[app="earthquake-relief"] {
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  transform: translate3d(0, -300%, 0);
+}
+
+html[data-cf-earthquake-relief-visibility="visible"] > body > cloudflare-app[app="earthquake-relief"] {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+cloudflare-app[app="earthquake-relief"] alert-wrapper {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+  display: flex;
+  border-top: 3px solid #f73b38;
+  border-bottom: 1px solid #f9f9f9;
+  z-index: 1;
+}
+
+
+cloudflare-app[app="earthquake-relief"] alert-message {
+  background-color: #fff;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 3.5em;
+}
+
+cloudflare-app[app="earthquake-relief"] alert-message-content {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-right: 1em;
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.select-theme-earthquake-relief .select-option[data-value="Donate now"] {
+  display: none !important;
+}
+
+@font-face {
+  font-family: "cfapps-earthquake-relief-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRk9UVE8AAAOgAAoAAAAABXwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAMAAAADRKjcpT0ZGVE0AAAG0AAAAGgAAABxzCc2eT1MvMgAAAdAAAABIAAAAYIDKBSljbWFwAAACGAAAADcAAAFCAA0i4WhlYWQAAAJQAAAALwAAADYDttYWaGhlYQAAAoAAAAAgAAAAJAatAehobXR4AAACoAAAAAgAAAAIA/oAAG1heHAAAAKoAAAABgAAAAYAAlAAbmFtZQAAArAAAADYAAABsEnBB1pwb3N0AAADiAAAABYAAAAg/50AZ3icY2RgYWFgZGTkSU1MTy3SzUzOzytmYGRiYGRw/CHD9EOW+YcESw8PYwQP80ceFjkuBpYODfnubjiDh7275MekXx2sMgxd/DIMDAIyDL2CMgwcMgwnhRiYQcbwMkgwKBdlpmeUJGeklhXl5yFZhGwnAwNjOwMTI6OCeffHXzwfGT9+/PCR+aPY96O/bvw+yvbxX5HoL54P/3jY+X5M+tEi+if8x4yAiB9af1L/APGxUFa+HxNFukW7ebgAOkZGo3icY2BgYGQAggsFDokg+qLPsXkwGgBEYgblAAB4nGNgZvzLOIGBlYGD1Zh1JgMDoxyEZr7OkMYkxAAErAwQ0MCACgLSXFMYHBSsFKzY0v6lMexg/sIgDhRmhCtQAEJGAEQ9C294nGNgYGBmgGAZBkYGELAB8hjBfBYGBSDNAoRAvoLV//8Q8v5xqEoGRjYGGHN4AiI8BwCY4gcNAHicY2BkYGAA4i3P72rH89t8ZeDmYACBiz7H5iHo/y8Z/zF/AXI5GJhAogBqdw1CAHicY2BkYGD+8v8lww7GvwwM//8z/mMAiqAAJgDAhweXAf0AAAH9AAAAAFAAAAIAAHicjY+9DcIwEIVfIEHiR5SI0gUSlSM7AgoGoKSkR8iK0sSSwwyMwBiMwQCMwQDUPJsrKCiwdPZ3d+9+DGCCKzLEk2GMuXAPBYxwH0tchHNq7sIF+Sk8wDibUpnlQ0ZmqSpyDyMshPvYYyOcU3MTLsgP4QH5BYcjat4BGg1O8GjRAe5Yu6Cbk2/pfMUlskv+Ob0h1StUKPkPhS3td9dPzlKlsaJVJIs12/n2vPOhdqoqjdqqr+n0rNErXRlL4T/bHlK+Yz5m47y4Fw4udI1vlS3NX33eEhBDMnicY2BmAIP/sxjSgBQjAxoAAC6qAgQAAA==) format("woff");
+}
+
+cloudflare-app[app="earthquake-relief"] alert-dismiss {
+  cursor: pointer;
+  color: rgba(10, 10, 10, .25);
+  display: inline-block;
+  flex: 0 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  height: 1em;
+  line-height: .75em;
+  margin: 0 .2em;
+  user-select: none;
+  width: .9em;
+}
+
+cloudflare-app[app="earthquake-relief"] alert-dismiss:hover {
+  color: rgba(10, 10, 10, .5);
+}
+
+cloudflare-app[app="earthquake-relief"] charties-cta {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  border-radius: .2em;
+  position: relative;
+  padding: .35rem 2.6em 0.35rem .8em;
+  background: rgb(247, 56, 56);
+  border: 1px solid rgb(220, 41, 41);
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+cloudflare-app[app="earthquake-relief"] charties-cta:after {
+  content: "";
+  background: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M58.296 60.82c.43.286.923.43 1.418.43s.99-.144 1.418-.43c.873-.583 21.4-14.378 28.963-28.235 1.87-2.898 2.858-6.245 2.858-9.688C92.953 13.027 84.923 5 75.056 5c-7.257 0-12.63 6.02-15.34 9.167C57.003 11.02 51.63 5 44.376 5c-9.87 0-17.9 8.027-17.9 17.897 0 3.442.99 6.79 2.857 9.688 7.56 13.857 28.09 27.652 28.962 28.234zm-13.92-50.71c5.11 0 9.387 4.975 11.686 7.648 1.428 1.662 2.215 2.58 3.653 2.58s2.225-.918 3.655-2.58c2.297-2.674 6.573-7.648 11.687-7.648 7.05 0 12.784 5.736 12.784 12.785 0 2.48-.72 4.896-2.08 6.98-.04.058-.07.12-.11.18-5.84 10.788-21.18 22.17-25.93 25.524-4.75-3.36-20.09-14.74-25.93-25.53-.03-.06-.07-.13-.11-.18-1.36-2.09-2.08-4.5-2.08-6.98 0-7.05 5.74-12.79 12.79-12.79z'/><path d='M90.46 60.2c-4.675-2.738-8.596 1.324-10.073 2.852-3.113 3.225-6.863 6.413-8.76 7.98-.807-.362-1.696-.567-2.632-.576-5.783-.31-14.897-1.354-17.178-2.71-2.45-1.457-4.414-2.88-6.145-4.134-4.975-3.606-8.903-6.452-18.686-6.452-2.836 0-5.322.786-7.727 1.548-2.47.782-4.8 1.52-7.62 1.52-3.11 0-5.63 2.523-5.63 5.626V80.17c0 3.103 2.52 5.625 5.62 5.625 5.35 0 13.71.275 15.554.89 3.324 1.11 11.117 5.73 13.84 7.416.034.03.07.05.104.07.984.55 2.1.84 3.23.84h26c2.75 0 5.81-2.54 6.87-4.3C80.654 85.04 92.88 69.648 93 69.49c.11-.14.204-.29.283-.45 1.584-3.166.368-6.97-2.826-8.84zM70.375 89.886h-26c-.246 0-.49-.06-.706-.17-.96-.595-10.42-6.404-14.85-7.88-3.3-1.098-14.89-1.154-17.18-1.154-.29 0-.52-.228-.52-.51v-14.32c0-.283.23-.512.512-.512 3.602 0 6.554-.935 9.155-1.758 2.222-.703 4.14-1.31 6.185-1.31 8.126 0 10.97 2.062 15.688 5.48 1.82 1.317 3.883 2.81 6.53 4.388 1.33.79 3.534 1.412 6.004 1.895 5.31 1.038 11.85 1.438 13.58 1.53.044.003.09.003.135.003.843 0 1.532.688 1.532 1.535 0 .846-.688 1.532-1.534 1.532-.046 0-.09.003-.136.005l-19.35 1.018c-1.54-.056-5.178-2.63-7.593-4.34-.624-.443-1.234-.87-1.834-1.283-1.31-.904-2.56-1.716-3.7-2.287-1.265-.635-2.8-.12-3.43 1.143s-.12 2.8 1.142 3.44c1.316.66 3.04 1.88 4.864 3.17 3.838 2.72 7.46 5.28 10.6 5.28h.137l19.373-1.02c3.63-.04 6.572-3.01 6.572-6.64 0-.823-.15-1.61-.426-2.34 2.05-1.7 5.746-4.867 8.925-8.157 2.18-2.256 3.048-2.44 3.813-1.992.68.4 1.174 1.177.912 1.956-1.7 2.146-12.56 15.9-15.924 21.487-.45.74-1.95 1.77-2.496 1.83z'/></svg>");
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  margin-left: 0.7em;
+  width: 1em;
+  height: 1em;
+}
+
+cloudflare-app[app="earthquake-relief"] charties-select {
+  background: rgba(255, 255, 255, 0.975);
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  bottom: 0;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 300ms ease-out;
+  z-index: -1;
+  visibility: hidden;
+}
+
+html[data-cf-earthquake-relief-visibility="visible"] cloudflare-app[app="earthquake-relief"] charties-select {
+  visibility: visible;
+}
+
+cloudflare-app[app="earthquake-relief"].data-slide-out charties-select {
+  transform: translate3d(0, 100%, 0);
+}
+
+cloudflare-app[app="earthquake-relief"] .cf-charity-link {
+  display: flex !important;
+  justify-content: space-between !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
+  font-size: 1em !important;
+  border-top: 1px solid transparent !important;
+  cursor: pointer !important;
+  padding: .7em .5em !important;
+}
+
+cloudflare-app[app="earthquake-relief"] .cf-charity-link::after {
+  display: inline;
+  content: "›";
+  opacity: 0.5;
+}
+
+cloudflare-app[app="earthquake-relief"] .cf-charity-link + .cf-charity-link {
+  border-top-color: #f3f3f3 !important;
+}
+
+cloudflare-app[app="earthquake-relief"] .cf-charity-link:link,
+cloudflare-app[app="earthquake-relief"] .cf-charity-link:active,
+cloudflare-app[app="earthquake-relief"] .cf-charity-link:visited {
+  color: #000 !important;
+}
+
+cloudflare-app[app="earthquake-relief"] .cf-charity-link:hover {
+  background-color: #f34c4c !important;
+  color: #fff !important;
+}
+
+html > body > cloudflare-app[app="earthquake-relief"][data-style="slim"] {
+  font-size: .92em;
+  min-height: 2.2em;
+}
+
+@media (min-width: 768px) {
+  charties-cta {
+    margin: 0 .6em;
+  }
+}
+
+@media (max-width: 768px) {
+  html > body > cloudflare-app[app="earthquake-relief"] {
+    align-items: center;
+    font-size: .92em;
+    min-height: 2.2em;
+  }
+
+  cloudflare-app[app="earthquake-relief"] alert-message {
+    padding: .5em 0 .5em .5em;
+  }
+
+  charties-cta {
+    margin-top: .6em;
+  }
+
+  cloudflare-app[app="earthquake-relief"] alert-message-content {
+    flex-flow: column nowrap !important;
+    align-items: flex-start !important;
+  }
+}
+
